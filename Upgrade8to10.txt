@@ -1,0 +1,14 @@
+1. https://jasontaylor.dev/asp-net-core-angular-9-upgrade/
+
+To upgrade from 8 to 10 I followed the guide above to upgrade to angular 9, then did the following to upgrade to 10.
+1. I don't need angular universal so I removed "ModuleMapLoaderModule" and it's import from "ClientApp\src\app\app.server.module.ts".
+2. I removed "@nguniversal/module-map-ngfactory-loader" from package.json
+3. Ran "npm install"
+4. Installed latest angular cli using "npm i -g @angular/cli"
+5. Ran "ng update @angular/core @angular/cli"
+6. Ran "dotnet run" without any issues.
+
+
+https://github.com/angular/angular/issues/34970#issuecomment-581838896
+
+https://stackoverflow.com/questions/60114758/uncaught-syntaxerror-strict-mode-code-may-not-include-a-with-statement
